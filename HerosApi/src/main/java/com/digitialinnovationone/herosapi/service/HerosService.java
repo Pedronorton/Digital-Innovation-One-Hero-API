@@ -1,0 +1,42 @@
+package com.digitialinnovationone.herosapi.service;
+
+import com.digitialinnovationone.herosapi.document.Heroes;
+import com.digitialinnovationone.herosapi.repository.HerosRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+
+@Service
+public class HerosService {
+    private final HerosRepository heroesRepository;
+
+    public HerosService(HerosRepository heroesRepository) {
+        this.heroesRepository = heroesRepository;
+    }
+
+    public Flux<Heroes> findAll(){
+
+        return Flux.fromIterable(this.heroesRepository.findAll());
+    }
+
+    public  Mono<Heroes> findByIdHero(String id){
+
+        return  Mono.justOrEmpty(this.heroesRepository.findById(id));
+    }
+
+
+    public Mono<Heroes> save(Heroes heroes){
+        return  Mono.justOrEmpty(this.heroesRepository.save(heroes));
+    }
+
+
+    public Mono<Boolean> deletebyIDHero(String id) {
+        heroesRepository.deleteById(id);
+        return Mono.just(true);
+
+    }
+
+
+}
