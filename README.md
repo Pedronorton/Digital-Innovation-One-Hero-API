@@ -28,7 +28,7 @@ O projeto foi utilizado utilizando as seguintes tecnologias.
 
 ## :bookmark_tabs: Setup
 - Fazer cadastro na [AWS](https://sa-east-1.console.aws.amazon.com/console/home?region=sa-east-1)
-- -Baixar [AWS CLI](https://aws.amazon.com/pt/cli/)
+- Baixar [AWS CLI](https://aws.amazon.com/pt/cli/)
 - Configurar na máquina. Para ver as credenciais entre na conta na aws e acesse credenciais de segurança
 - Basta executar o comando e inseri-las 
 ```bash
@@ -47,5 +47,8 @@ O projeto foi utilizado utilizando as seguintes tecnologias.
 ### Executar API
 Exercutar arquivo 
 HerosApi/src/main/java/com/digitalinnovationone/herosapi/HerosapiApplication.java
+
+### Documentação API
+https://documenter.getpostman.com/view/9197631/Tz5qZGds
 
 
